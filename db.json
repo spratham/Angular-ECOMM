@@ -11,6 +11,18 @@
       "password": "",
       "email": "",
       "id": 2
+    },
+    {
+      "name": "Pratham Singh",
+      "password": "123",
+      "email": "Pratham919singh@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "acsawd",
+      "password": "awdas",
+      "email": "awdd3@efew.cse",
+      "id": 4
     }
   ]
 }

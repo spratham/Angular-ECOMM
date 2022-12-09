@@ -1,31 +1,66 @@
-<div class="seler-auth">
-  <div class="signup"><h1>Seller Sign-up</h1></div>
-  <form
-    #sellerSignup="ngForm"
-    (ngSubmit)="signUp(sellerSignup.value)"
-    class="common-form"
-  >
-    <input
-      class="form-input"
-      ngModel
-      type="text"
-      name="name"
-      placeholder="Enter Name"
-    />
-    <input
-      class="form-input"
-      ngModel
-      type="password"
-      name="password"
-      placeholder="Enter Password"
-    />
-    <input
-      class="form-input"
-      ngModel
-      type="email"
-      name="email"
-      placeholder="Enter Email"
-    />
-    <button class="form-buttons">SignUp</button>
-  </form>
+<div class="seller-auth">
+  <div class="signup" *ngIf="showLogin">
+    <h1>Seller Sign-up</h1>
+    <form
+      #sellerSignup="ngForm"
+      (ngSubmit)="signUp(sellerSignup.value)"
+      class="common-form"
+    >
+      <input
+        class="form-input"
+        ngModel
+        type="text"
+        name="name"
+        placeholder="Enter Name"
+      />
+      <input
+        class="form-input"
+        ngModel
+        type="email"
+        name="email"
+        placeholder="Enter Email"
+      />
+      <input
+        class="form-input"
+        ngModel
+        type="password"
+        name="password"
+        placeholder="Enter Password"
+      />
+      <button class="form-buttons">SignUp</button>
+      <a class="auth-toggle-link" (click)="openSignUp()"
+        >Already have an account? Click here to login</a
+      >
+    </form>
+  </div>
+
+  <!-- login area -->
+
+  <div class="login" *ngIf="!showLogin">
+    <h1>Seller Login</h1>
+    <form
+      #sellerLogin="ngForm"
+      (ngSubmit)="login(sellerLogin.value)"
+      class="common-form"
+    > 
+      <input
+        class="form-input"
+        ngModel
+        type="email"
+        name="email"
+        placeholder="Enter Email"
+      />
+      <input
+        class="form-input"
+        ngModel
+        type="password"
+        name="password"
+        placeholder="Enter Password"
+      />
+      <button class="form-buttons">Login</button>
+      <a class="auth-toggle-link" (click)="openLogin()"
+        >Already have an account? Click here to login</a
+      >
+    </form>
+  </div>
 </div>
