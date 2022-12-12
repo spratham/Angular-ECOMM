@@ -38,11 +38,12 @@
 
   <div class="login" *ngIf="!showLogin">
     <h1>Seller Login</h1>
+    <p style="color: red">{{ authError }}</p>
     <form
       #sellerLogin="ngForm"
       (ngSubmit)="login(sellerLogin.value)"
       class="common-form"
-    > 
+    >
       <input
         class="form-input"
         ngModel

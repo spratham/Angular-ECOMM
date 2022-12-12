@@ -23,6 +23,22 @@
       "password": "awdas",
       "email": "awdd3@efew.cse",
       "id": 4
+    },
+    {
+      "email": "pratham919singh@gmail.com",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "email": "Pratham919singh@gmail.com",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "name": "a",
+      "email": "a@a.com",
+      "password": "a@a.com",
+      "id": 7
     }
   ]
 }
