@@ -21,6 +21,7 @@ export class SellerAuthComponent implements OnInit {
   }
   login(data: Login): void {
     // console.warn(data);
+    this.authError = '';
     this.seller.userLogin(data);
     this.seller.isLoginError.subscribe((isError) => {
       if (isError) {
@@ -34,4 +35,5 @@ export class SellerAuthComponent implements OnInit {
   openSignUp() {
     this.showLogin = false;
   }
+  
 }

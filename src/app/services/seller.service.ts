@@ -38,7 +38,7 @@ export class SellerService {
         if (result && result.body && result.body.length === 1) {
           localStorage.setItem('seller', JSON.stringify(result.body));
           console.warn('login pass');
-          this.route.navigate(['seller-home']);
+          this.reloadSeller();
         } else {
           console.warn('login failed');
           this.isLoginError.emit(true);

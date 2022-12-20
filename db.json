@@ -1,44 +1,16 @@
 {
   "seller": [
     {
-      "id": 1,
-      "name": "xyz",
-      "email": "xyz@gmail.com",
-      "password": "ayz@123"
-    },
-    {
-      "name": "",
-      "password": "",
-      "email": "",
-      "id": 2
-    },
-    {
-      "name": "Pratham Singh",
-      "password": "123",
-      "email": "Pratham919singh@gmail.com",
-      "id": 3
-    },
-    {
-      "name": "acsawd",
-      "password": "awdas",
-      "email": "awdd3@efew.cse",
-      "id": 4
-    },
-    {
-      "email": "pratham919singh@gmail.com",
-      "password": "123",
-      "id": 5
-    },
-    {
-      "email": "Pratham919singh@gmail.com",
-      "password": "123",
-      "id": 6
-    },
-    {
       "name": "a",
       "email": "a@a.com",
       "password": "a@a.com",
-      "id": 7
+      "id": 1
+    },
+    {
+      "name": "testing",
+      "email": "test@t.com",
+      "password": "test@t.com",
+      "id": 2
     }
   ]
 }
