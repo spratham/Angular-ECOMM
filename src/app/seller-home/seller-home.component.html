@@ -1,1 +1,101 @@
-<p>seller-home works!</p>
+<div class="product-list">
+  <!-- <table>
+    <tr>
+      <thead>
+        <th>Name</th>
+        <th>Color</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Image</th>
+        <th>Description</th>
+      </thead>
+    </tr>
+    <tbody *ngFor="let item of productList">
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.color }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.category }}</td>
+        <td>{{ item.image }}</td>
+        <td>{{ item.description }}</td>
+      </tr>
+    </tbody>
+  </table> -->
+
+  <!-- Filter search bar-->
+
+  <div class="container">
+    <h1>All Product List</h1>
+
+    <div>
+      <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input
+          matInput
+          (keyup)="applyFilter($event)"
+          placeholder="Ex. iPhone"
+          #input
+        />
+      </mat-form-field>
+
+      <!-- material table -->
+
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort>
+          <!-- ID Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+            <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+          </ng-container>
+
+          <!-- Progress Column -->
+          <ng-container matColumnDef="color">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Color</th>
+            <td mat-cell *matCellDef="let row">{{ row.color }}</td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Price</th>
+            <td mat-cell *matCellDef="let row">{{ row.price }}</td>
+          </ng-container>
+
+          <!-- Fruit Column -->
+          <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>
+            <td mat-cell *matCellDef="let row">{{ row.category }}</td>
+          </ng-container>
+
+          <!-- Image Column -->
+          <ng-container matColumnDef="image">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>
+            <td mat-cell *matCellDef="let row">{{ row.image }}</td>
+          </ng-container>
+
+          <!-- Description Column -->
+          <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+              Description
+            </th>
+            <td mat-cell *matCellDef="let row">{{ row.description }}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+          <!-- Row shown when there is no matching data. -->
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">
+              No data matching the filter "{{ input.value }}"
+            </td>
+          </tr>
+        </table>
+
+        <mat-paginator
+          [pageSizeOptions]="[5, 10, 25, 100]"
+          aria-label="Select page of users"
+        ></mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>

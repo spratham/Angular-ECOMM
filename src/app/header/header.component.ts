@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
         //if seller logged in then inside else outside
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
 
-          console.warn('in seller area');
+          // console.warn('in seller area');
           this.menuType = 'seller';
 
           //to get the seller name form localStorage
@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
             this.sellerName = sellerData.name;
           }
         } else {
-          console.warn('outside seller');
+          // console.warn('outside seller');
           this.menuType = 'default';
         }
       }

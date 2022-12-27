@@ -1,11 +1,14 @@
 .nav {
   display: flex;
   justify-content: space-between;
+  // border: 2px solid red;
 }
 .nav h1 {
   color: blueviolet;
-  margin: 0;
+  // padding-top: 10px;
   font-size: 40px;
+  // border: 2px solid red;
+  padding-top: 10px;
 }
 
 .nav ul {
@@ -13,10 +16,11 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  // border: 2px solid red;
 }
 .nav li {
   padding-left: 15px;
-  padding-top: 15px;
+  padding-top: 1rem;
 }
 .nav li a {
   text-decoration: none;
@@ -28,6 +32,7 @@
   border: 1px solid blueviolet;
   height: 35px;
   border-right: 0;
+  padding-left: 1rem;
 }
 .nav .nav-search button {
   color: blueviolet;

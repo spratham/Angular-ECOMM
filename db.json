@@ -12,5 +12,34 @@
       "password": "test@t.com",
       "id": 2
     }
+  ],
+  "products": [
+    {
+      "name": "Apple",
+      "color": "red",
+      "category": "fruits",
+      "price": "100",
+      "image": "no",
+      "description": "good Apple",
+      "id": 1
+    },
+    {
+      "name": "Banana",
+      "color": "yello",
+      "category": "fruits",
+      "price": "100",
+      "image": "no",
+      "description": "good Apple",
+      "id": 2
+    },
+    {
+      "name": "bread",
+      "color": "red",
+      "category": "carbs",
+      "price": "50",
+      "image": "no",
+      "description": "bad carbs",
+      "id": 3
+    }
   ]
 }
